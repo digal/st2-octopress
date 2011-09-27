@@ -1,0 +1,8 @@
+[
+    {
+        "caption": "Octopress: New post",
+        "command": "octo_post",
+        "args": {
+        }
+    }
+]
