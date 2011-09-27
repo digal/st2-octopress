@@ -22,5 +22,5 @@ Copy/clone repo contents to `Packages/Octopress` directory.
 
 ## Links
 
-[Sublime text 2](http://www.sublimetext.com/2)
-[Octopress](http://octopress.org/)
+- [Sublime text 2](http://www.sublimetext.com/2)
+- [Octopress](http://octopress.org/)
