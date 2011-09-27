@@ -32,7 +32,7 @@ class OctoPostCommand(sublime_plugin.WindowCommand):
   def find_octopress_dir(self):
     for directory in self.window.folders():
       print(os.path.join(directory, u'Rakefile'))
-      if (len(glob.glob(os.path.join(directory, u'Rakefile'))) > 0):
+      if glob.glob(os.path.join(directory, u'Rakefile')):
         yield directory
 
   def new_post_in(self, octopress_dir):
