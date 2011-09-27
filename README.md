@@ -1,20 +1,24 @@
-## Octopress plugin for Sublime Text 2
+# Octopress plugin for Sublime Text 2
 
-Note: Plugin assumes that you have your octopress folder opened in the file pane. For now, 'octopress folder' means 'first folder with Rakefile in it' :) 
+## Pitfalls
+
+Plugin assumes that you have your octopress folder opened in the file pane. For now, 'octopress folder' means 'first folder with Rakefile in it' :) 
+
+OS X Pitfall: Octopress uses rake, which uses ruby. If you run Sublime Text 2 from the GUI (dock/launchpad/etc.) it may not see your bash environment, including your usual ruby path. To fix this you need to add necessary environment variables to `~/.MacOSX/environment.plist`. It could be done manually or using a simple script like [this one](http://hints.macworld.com/article.php?story=20040715133738459). The changes to the environment symbol definitions will become active the next time you log in.
 
 ## Installation 
 
-Drop repo contents to `Packages/Octopress` directory. Normal Sublime package coming soon.
+Copy/clone repo contents to `Packages/Octopress` directory.
 
 ## Commands supported
 
-- `octo_post` ("Octopress: New post" from the command palette) - create new post (ask for title)
+- `Tools/Octopress/New post...` - create a new post (asks for title)
 
-## TODO:
+## TODO
 
-- Proper packaging
-- Preview
-- Deploy
+- Better packaging
+- Other commands (generate, preview, deploy, etc.)
+- Store octopress dir in config
 
 ## Links
 
