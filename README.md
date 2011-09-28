@@ -10,14 +10,15 @@ OS X Pitfall: Octopress uses rake, which uses ruby. If you run Sublime Text 2 fr
 
 Copy/clone repo contents to `Packages/Octopress` directory.
 
-## Commands supported
+## Commands supported (Tools/Octopress)
 
-- `Tools/Octopress/New post...` - create a new post (asks for title)
+- `New post...` - create a new post (asks for title)
+- `Deploy` - deploys blog (may block for a few seconds, to be improved in the future)
 
 ## TODO
 
 - Better packaging
-- Other commands (generate, preview, deploy, etc.)
+- Other commands (generate, preview, etc.)
 - Store octopress dir in config
 
 ## Links
