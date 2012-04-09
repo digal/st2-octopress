@@ -1,4 +1,4 @@
-import sublime, sublime_plugin, glob, os, subprocess, time
+import sublime, sublime_plugin, glob, os, subprocess, time, re
 
 
 class OctoCommandBase(sublime_plugin.WindowCommand):
@@ -35,7 +35,9 @@ class OctoPostCommand(OctoCommandBase):
       cwd    = self.octopress_dir
     ).communicate()[0]
     print(result)
-    filename = os.path.join(self.octopress_dir, result.replace('Creating new post: ', '').replace('\n', ''))
+    r = re.search('new post: (.*)$', result)
+    postfile = r.groups(0)[0]
+    filename = os.path.join(self.octopress_dir, postfile)
     print("Opening %s" % filename)
     self.window.open_file(filename)
 
