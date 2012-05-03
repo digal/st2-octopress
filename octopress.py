@@ -28,7 +28,7 @@ class OctoPostCommand(OctoCommandBase):
       
   def new_post_done(self, text):
     result = subprocess.Popen(
-      'rake new_post["%s"]' % text, 
+      'bundle exec rake new_post["%s"]' % text, 
       shell  = True, 
       stdout = subprocess.PIPE, 
       stderr = subprocess.STDOUT, 
@@ -62,7 +62,7 @@ class OctoDeployCommand(OctoCommandBase):
 
   def deploy_in(self, octopress_dir):
     result = subprocess.Popen(
-      'rake deploy', 
+      'bundle exec rake deploy', 
       shell  = True, 
       stdout = subprocess.PIPE, 
       stderr = subprocess.STDOUT, 
